@@ -1,0 +1,14 @@
+<h1>NEW GAME</h1>
+
+<div class="letters">
+  <% @letters.each do |letter| %>
+    <div class="letter"><p><%= letter.capitalize %></p></div>
+  <% end %>
+</div>
+
+  <form action="/answer" class="answer">
+    <h3>Give me the longuest word you can find</h3>
+    <input type="text" name="word" placeholder="your word here" class="input">
+    <input type="submit" value="test!" id="btn" class="input">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
